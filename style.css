@@ -1,29 +1,52 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #0c0c0c13;
-    color: #0a0000ea;
+    color: #380404ea;
     margin: 0;
     padding: 20px;
 }
 header {
-    background-color: #02011109;
+    background-color: #190be04b;
     color: #0b0b0cb6;
     padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
-nav {
-    margin: 20px 0;
-    color: ;#333;
-    text-align: left;
-    font-size: medium;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+    
+.navbar a {
+    color: #4008c2ce;
     text-decoration: none;
-    text-indent: 0cqmin;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
+
+
 section {
-    background-color: #03021871;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(177, 12, 122, 0);
+    background-color: lch(27.55% 111.94 305.9 / 0.466);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(0, 123, 255);
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    animation: fadeIn 1s ease-in-out;
 }
 form input, form textarea {
     width: 100%;
@@ -46,12 +69,7 @@ form button:hover {
     background-color: #420adf;
     color: #6e3636;
 }
-image {
-    max-width: 100%;
-    height: 150px;
-    border-radius: 50px;
-    object-fit: cover;
-    border-radius: 10px;
+
 }
 .card {
     background-color: #0f040409;
@@ -72,4 +90,52 @@ image {
     flex-wrap: nowrap;/* forces side by side layout */
     overflow-x: auto; /* allows horizontal scrolling if needed */
 
+}
+.navbar ul {
+    list-style: none; /* removes default list styling */
+    padding: 0; /* removes default padding */
+    margin: 0; /* removes default margin */
+    display: flex;
+    justify-content: center;
+    gap: 4px; 
+}
+.navbar {
+    background-color: ;#02011109;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+.navbar a:hover {
+    color: #e76f1fb9;
+    text-decoration: underline;
+    transform: scale(1));
+    color: #df5f0a; /*golden color on hover */
+
+}
+.cv-box {
+    background-color: #0f040409;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(122, 4, 4, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 400px;
+    border: 2px solid #df5f0a; 
+}
+.download-btn {
+    background-color: #110101dc;
+    color: #007BFF;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.2s ease;
+}
+.navbar li {
+    margin: 0 15px;
 }
